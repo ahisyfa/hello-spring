@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"
+	default-init-method="init"
+	default-destroy-method="destroy"
+	>
+
+    <!-- Define your beans here -->
+	<bean id="gendang"
+		  class="com.github.ahisyfa.hellospring.ioc.Gendang" scope="singleton">
+	</bean>
+
+	<bean id="guitar"
+		  class="com.github.ahisyfa.hellospring.ioc.Guitar" scope="singleton">
+	</bean>
+
+	<bean id="instantiationTracingBeanPostProcessor" class="com.github.ahisyfa.hellospring.ioc.InstantiationTracingBeanPostProcessor" scope="singleton" />
+
+
+	<alias name="gendang" alias="gendangDut" />
+
+
+
+	<!-- define the dependency -->
+
+
+</beans>
